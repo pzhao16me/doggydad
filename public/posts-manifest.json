@@ -1,0 +1,320 @@
+{
+  "posts": [
+    {
+      "category": "general",
+      "file": "getting-started.md",
+      "path": "posts/general/getting-started.md"
+    },
+    {
+      "category": "general",
+      "file": "welcome.md",
+      "path": "posts/general/welcome.md"
+    },
+    {
+      "category": "reading-notes",
+      "file": "effective-engineer.md",
+      "path": "posts/reading-notes/effective-engineer.md"
+    },
+    {
+      "category": "tech-learning",
+      "file": "git-workflow.md",
+      "path": "posts/tech-learning/git-workflow.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "01_1966_Alan_Perlis.md",
+      "path": "posts/turing-award/01_1966_Alan_Perlis.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "02_1967_Maurice_Wilkes.md",
+      "path": "posts/turing-award/02_1967_Maurice_Wilkes.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "03_1968_Richard_Hamming.md",
+      "path": "posts/turing-award/03_1968_Richard_Hamming.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "04_1969_Marvin_Minsky.md",
+      "path": "posts/turing-award/04_1969_Marvin_Minsky.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "05_1970_James_H_Wilkinson.md",
+      "path": "posts/turing-award/05_1970_James_H_Wilkinson.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "06_1971_John_McCarthy.md",
+      "path": "posts/turing-award/06_1971_John_McCarthy.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "07_1972_Edsger_W_Dijkstra.md",
+      "path": "posts/turing-award/07_1972_Edsger_W_Dijkstra.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "08_1973_Charles_W_Bachman.md",
+      "path": "posts/turing-award/08_1973_Charles_W_Bachman.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "09_1974_Donald_E_Knuth.md",
+      "path": "posts/turing-award/09_1974_Donald_E_Knuth.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "10_1975_Allen_Newell_and_Herbert_A_Simon.md",
+      "path": "posts/turing-award/10_1975_Allen_Newell_and_Herbert_A_Simon.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "11_1976_Michael_O_Rabin_and_Dana_S_Scott.md",
+      "path": "posts/turing-award/11_1976_Michael_O_Rabin_and_Dana_S_Scott.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "12_1977_John_Backus.md",
+      "path": "posts/turing-award/12_1977_John_Backus.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "13_1978_Robert_W_Floyd.md",
+      "path": "posts/turing-award/13_1978_Robert_W_Floyd.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "14_1979_Kenneth_E_Iverson.md",
+      "path": "posts/turing-award/14_1979_Kenneth_E_Iverson.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "15_1980_C_A_R_Hoare.md",
+      "path": "posts/turing-award/15_1980_C_A_R_Hoare.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "16_1981_Edgar_F_Codd.md",
+      "path": "posts/turing-award/16_1981_Edgar_F_Codd.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "17_1982_Stephen_A_Cook.md",
+      "path": "posts/turing-award/17_1982_Stephen_A_Cook.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "18_1983_Ken_Thompson_and_Dennis_Ritchie.md",
+      "path": "posts/turing-award/18_1983_Ken_Thompson_and_Dennis_Ritchie.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "19_1984_Niklaus_Wirth.md",
+      "path": "posts/turing-award/19_1984_Niklaus_Wirth.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "20_1985_Richard_M_Karp.md",
+      "path": "posts/turing-award/20_1985_Richard_M_Karp.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "21_1986_John_E_Hopcroft_and_Robert_E_Tarjan.md",
+      "path": "posts/turing-award/21_1986_John_E_Hopcroft_and_Robert_E_Tarjan.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "22_1987_John_Cocke.md",
+      "path": "posts/turing-award/22_1987_John_Cocke.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "23_1988_Ivan_Sutherland.md",
+      "path": "posts/turing-award/23_1988_Ivan_Sutherland.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "24_1989_William_Kahan.md",
+      "path": "posts/turing-award/24_1989_William_Kahan.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "25_1990_Fernando_J_Corbató.md",
+      "path": "posts/turing-award/25_1990_Fernando_J_Corbató.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "26_1991_Robin_Milner.md",
+      "path": "posts/turing-award/26_1991_Robin_Milner.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "27_1992_Butler_W_Lampson.md",
+      "path": "posts/turing-award/27_1992_Butler_W_Lampson.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "28_1993_Juris_Hartmanis_and_Richard_E_Stearns.md",
+      "path": "posts/turing-award/28_1993_Juris_Hartmanis_and_Richard_E_Stearns.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "29_1994_Edward_A_Feigenbaum_and_Raj_Reddy.md",
+      "path": "posts/turing-award/29_1994_Edward_A_Feigenbaum_and_Raj_Reddy.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "30_1995_Manuel_Blum.md",
+      "path": "posts/turing-award/30_1995_Manuel_Blum.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "31_1996_Amir_Pnueli.md",
+      "path": "posts/turing-award/31_1996_Amir_Pnueli.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "32_1997_Douglas_C_Engelbart.md",
+      "path": "posts/turing-award/32_1997_Douglas_C_Engelbart.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "33_1998_Jim_Gray.md",
+      "path": "posts/turing-award/33_1998_Jim_Gray.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "34_1999_Frederick_P_Brooks_Jr.md",
+      "path": "posts/turing-award/34_1999_Frederick_P_Brooks_Jr.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "35_2000_Andrew_Yao.md",
+      "path": "posts/turing-award/35_2000_Andrew_Yao.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "36_2001_Ole_Johan_Dahl_and_Kristen_Nygaard.md",
+      "path": "posts/turing-award/36_2001_Ole_Johan_Dahl_and_Kristen_Nygaard.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "37_2002_Rivest_Shamir_and_Adleman.md",
+      "path": "posts/turing-award/37_2002_Rivest_Shamir_and_Adleman.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "38_2003_Alan_Kay.md",
+      "path": "posts/turing-award/38_2003_Alan_Kay.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "39_2004_Vint_Cerf_and_Bob_Kahn.md",
+      "path": "posts/turing-award/39_2004_Vint_Cerf_and_Bob_Kahn.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "40_2005_Peter_Naur.md",
+      "path": "posts/turing-award/40_2005_Peter_Naur.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "41_2006_Frances_E_Allen.md",
+      "path": "posts/turing-award/41_2006_Frances_E_Allen.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "42_2007_Clarke_Emerson_Sifakis.md",
+      "path": "posts/turing-award/42_2007_Clarke_Emerson_Sifakis.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "43_2008_Barbara_Liskov.md",
+      "path": "posts/turing-award/43_2008_Barbara_Liskov.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "44_2009_Charles_P_Thacker.md",
+      "path": "posts/turing-award/44_2009_Charles_P_Thacker.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "45_2010_Leslie_G_Valiant.md",
+      "path": "posts/turing-award/45_2010_Leslie_G_Valiant.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "46_2011_Judea_Pearl.md",
+      "path": "posts/turing-award/46_2011_Judea_Pearl.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "47_2012_Shafi_Goldwasser_and_Silvio_Micali.md",
+      "path": "posts/turing-award/47_2012_Shafi_Goldwasser_and_Silvio_Micali.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "48_2013_Leslie_Lamport.md",
+      "path": "posts/turing-award/48_2013_Leslie_Lamport.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "49_2014_Michael_Stonebraker.md",
+      "path": "posts/turing-award/49_2014_Michael_Stonebraker.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "50_2015_Whitfield_Diffie_and_Martin_E_Hellman.md",
+      "path": "posts/turing-award/50_2015_Whitfield_Diffie_and_Martin_E_Hellman.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "51_2016_Tim_Berners_Lee.md",
+      "path": "posts/turing-award/51_2016_Tim_Berners_Lee.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "52_2017_John_L_Hennessy_and_David_A_Patterson.md",
+      "path": "posts/turing-award/52_2017_John_L_Hennessy_and_David_A_Patterson.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "53_2018_LeCun_Hinton_Bengio.md",
+      "path": "posts/turing-award/53_2018_LeCun_Hinton_Bengio.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "54_2019_Ed_Catmull_and_Pat_Hanrahan.md",
+      "path": "posts/turing-award/54_2019_Ed_Catmull_and_Pat_Hanrahan.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "55_2020_Alfred_V_Aho_and_Jeffrey_D_Ullman.md",
+      "path": "posts/turing-award/55_2020_Alfred_V_Aho_and_Jeffrey_D_Ullman.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "56_2021_Jack_J_Dongarra.md",
+      "path": "posts/turing-award/56_2021_Jack_J_Dongarra.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "57_2022_Robert_M_Metcalfe.md",
+      "path": "posts/turing-award/57_2022_Robert_M_Metcalfe.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "58_2023_Avi_Wigderson.md",
+      "path": "posts/turing-award/58_2023_Avi_Wigderson.md"
+    },
+    {
+      "category": "turing-award",
+      "file": "alan-turing.md",
+      "path": "posts/turing-award/alan-turing.md"
+    }
+  ],
+  "generated": "2025-12-11T15:18:07.572Z"
+}
