@@ -123,12 +123,26 @@ function navigateTo(view, postSlug = null) {
   if (view === 'home') {
     window.history.pushState({}, '', BASE_URL);
     renderHome();
+    trackPageView(BASE_URL, 'DoggyDad Blog - 首页');
   } else if (view === 'about') {
     window.history.pushState({}, '', `${BASE_URL}#about`);
     renderAbout();
+    trackPageView(`${BASE_URL}#about`, 'DoggyDad Blog - 关于');
   } else if (view === 'post' && postSlug) {
     window.history.pushState({}, '', `${BASE_URL}#${postSlug}`);
     renderPost(postSlug);
+    const post = posts.find(p => p.slug === postSlug);
+    trackPageView(`${BASE_URL}#${postSlug}`, post ? post.title : postSlug);
+  }
+}
+
+// Track page views for SPA navigation
+function trackPageView(path, title) {
+  if (typeof gtag === 'function') {
+    gtag('config', 'G-G63268TXPH', {
+      page_path: path,
+      page_title: title
+    });
   }
 }
 
@@ -147,7 +161,6 @@ window.addEventListener('popstate', () => {
 async function loadPosts() {
   try {
     // Fetch the posts manifest
-    // Use import.meta.env.BASE_URL for correct path in both dev and production
     const manifestResponse = await fetch(`${import.meta.env.BASE_URL}posts-manifest.json`);
     if (!manifestResponse.ok) {
       console.error('Failed to load posts manifest');
@@ -157,20 +170,19 @@ async function loadPosts() {
     const manifest = await manifestResponse.json();
     console.log(`📝 Loading ${manifest.posts.length} posts from manifest`);
 
-    const loadedPosts = [];
-
-    for (const postInfo of manifest.posts) {
+    // Load all posts in parallel for better performance
+    const postPromises = manifest.posts.map(async (postInfo) => {
       try {
         const response = await fetch(`${import.meta.env.BASE_URL}${postInfo.path}`);
         if (!response.ok) {
           console.warn(`Failed to fetch ${postInfo.path}: ${response.status}`);
-          continue;
+          return null;
         }
 
         const content = await response.text();
         const { data, content: markdown } = parseFrontmatter(content);
 
-        loadedPosts.push({
+        return {
           slug: `${postInfo.category}/${postInfo.file.replace('.md', '')}`,
           fileName: postInfo.file.replace('.md', ''),
           category: postInfo.category,
@@ -179,11 +191,15 @@ async function loadPosts() {
           description: data.description || '',
           tags: data.tags || [],
           content: markdown
-        });
+        };
       } catch (err) {
         console.warn(`Failed to load ${postInfo.path}:`, err);
+        return null;
       }
-    }
+    });
+
+    // Wait for all posts to load
+    const loadedPosts = (await Promise.all(postPromises)).filter(p => p !== null);
 
     // Sort by date (newest first)
     posts = loadedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
