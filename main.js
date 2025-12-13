@@ -109,14 +109,16 @@ document.getElementById('nav-home').addEventListener('click', (e) => {
 });
 
 // Router
+const BASE_URL = import.meta.env.BASE_URL;
+
 function navigateTo(view, postSlug = null) {
   currentView = view;
 
   if (view === 'home') {
-    window.history.pushState({}, '', '/');
+    window.history.pushState({}, '', BASE_URL);
     renderHome();
   } else if (view === 'post' && postSlug) {
-    window.history.pushState({}, '', `#${postSlug}`);
+    window.history.pushState({}, '', `${BASE_URL}#${postSlug}`);
     renderPost(postSlug);
   }
 }
@@ -134,7 +136,8 @@ window.addEventListener('popstate', () => {
 async function loadPosts() {
   try {
     // Fetch the posts manifest
-    const manifestResponse = await fetch('/posts-manifest.json');
+    // Use import.meta.env.BASE_URL for correct path in both dev and production
+    const manifestResponse = await fetch(`${import.meta.env.BASE_URL}posts-manifest.json`);
     if (!manifestResponse.ok) {
       console.error('Failed to load posts manifest');
       return;
@@ -147,7 +150,7 @@ async function loadPosts() {
 
     for (const postInfo of manifest.posts) {
       try {
-        const response = await fetch(`/${postInfo.path}`);
+        const response = await fetch(`${import.meta.env.BASE_URL}${postInfo.path}`);
         if (!response.ok) {
           console.warn(`Failed to fetch ${postInfo.path}: ${response.status}`);
           continue;

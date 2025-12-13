@@ -16,6 +16,21 @@
       "path": "posts/reading-notes/effective-engineer.md"
     },
     {
+      "category": "reading-notes",
+      "file": "erta-fooled-by-randomness.md",
+      "path": "posts/reading-notes/erta-fooled-by-randomness.md"
+    },
+    {
+      "category": "reading-notes",
+      "file": "taleb-antifragile.md",
+      "path": "posts/reading-notes/taleb-antifragile.md"
+    },
+    {
+      "category": "reading-notes",
+      "file": "taleb-the-black-swan.md",
+      "path": "posts/reading-notes/taleb-the-black-swan.md"
+    },
+    {
       "category": "tech-learning",
       "file": "git-workflow.md",
       "path": "posts/tech-learning/git-workflow.md"
@@ -316,5 +331,5 @@
       "path": "posts/turing-award/alan-turing.md"
     }
   ],
-  "generated": "2025-12-11T15:18:07.572Z"
+  "generated": "2025-12-13T12:08:54.841Z"
 }
