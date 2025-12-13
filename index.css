@@ -469,6 +469,24 @@ main {
   color: var(--color-text-muted);
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-social a {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+}
+
+.footer-social a:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
 /* Loading State */
 .loading {
   display: flex;

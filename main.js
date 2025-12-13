@@ -108,6 +108,12 @@ document.getElementById('nav-home').addEventListener('click', (e) => {
   navigateTo('home');
 });
 
+// About page navigation
+document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
+  e.preventDefault();
+  navigateTo('about');
+});
+
 // Router
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -117,6 +123,9 @@ function navigateTo(view, postSlug = null) {
   if (view === 'home') {
     window.history.pushState({}, '', BASE_URL);
     renderHome();
+  } else if (view === 'about') {
+    window.history.pushState({}, '', `${BASE_URL}#about`);
+    renderAbout();
   } else if (view === 'post' && postSlug) {
     window.history.pushState({}, '', `${BASE_URL}#${postSlug}`);
     renderPost(postSlug);
@@ -125,7 +134,9 @@ function navigateTo(view, postSlug = null) {
 
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.slice(1);
-  if (hash) {
+  if (hash === 'about') {
+    navigateTo('about');
+  } else if (hash) {
     navigateTo('post', hash);
   } else {
     navigateTo('home');
@@ -331,6 +342,70 @@ function renderPost(slug) {
   window.scrollTo(0, 0);
 }
 
+// Render about page
+function renderAbout() {
+  const content = document.getElementById('content');
+  
+  content.innerHTML = `
+    <article class="article about-page">
+      <button class="back-button" id="back-button">
+        ← 返回首页
+      </button>
+      
+      <header class="article-header">
+        <h1 class="article-title">关于我 👋</h1>
+      </header>
+      
+      <div class="article-content">
+        <p>你好！我是 <strong>DoggyDad</strong>，一名热爱技术与思考的软件工程师。</p>
+        
+        <h2>🎯 关于这个博客</h2>
+        <p>这个博客是我记录学习历程、分享技术见解和个人思考的地方。主要内容包括：</p>
+        <ul>
+          <li><strong>🏆 图灵奖系列</strong> - 探索计算机科学先驱们的贡献与思想，从 Alan Perlis 到 Avi Wigderson，了解塑造现代计算的伟大头脑</li>
+          <li><strong>📚 读书笔记</strong> - 深度阅读笔记，特别关注塔勒布的不确定性系列（《反脆弱》《黑天鹅》《随机漫步的傻瓜》）以及软件工程经典</li>
+          <li><strong>💻 技术学习</strong> - Git 工作流、开发最佳实践、工具使用技巧等实用内容</li>
+          <li><strong>📝 通用分享</strong> - 博客教程、个人思考和其他有趣的话题</li>
+        </ul>
+        
+        <h2>💡 我的兴趣</h2>
+        <ul>
+          <li><strong>计算机科学历史</strong> - 相信了解历史能帮助我们更好地理解现在和未来</li>
+          <li><strong>系统思维与风险管理</strong> - 对反脆弱性、黑天鹅事件、概率思维有浓厚兴趣</li>
+          <li><strong>高效工程实践</strong> - 追求用更聪明的方式工作，关注杠杆率和长期价值</li>
+          <li><strong>持续学习</strong> - 相信写作是最好的学习方式之一</li>
+        </ul>
+        
+        <h2>🛠️ 技术栈</h2>
+        <p>这个博客本身使用以下技术构建：</p>
+        <ul>
+          <li>Vite - 现代前端构建工具</li>
+          <li>Vanilla JavaScript - 保持简单</li>
+          <li>Markdown - 内容创作</li>
+          <li>GitHub Pages - 托管部署</li>
+        </ul>
+        
+        <h2>📬 联系我</h2>
+        <p>欢迎通过以下方式与我交流：</p>
+        <ul>
+          <li>💼 <a href="https://linkedin.com/in/peng-zhao-mei" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>𝕏 <a href="https://x.com/Hjfjfjsj" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li>🐙 <a href="https://github.com/pzhao16me" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+        
+        <hr>
+        <p><em>感谢你的访问！希望这里的内容对你有所帮助。</em> ✨</p>
+      </div>
+    </article>
+  `;
+
+  document.getElementById('back-button').addEventListener('click', () => {
+    navigateTo('home');
+  });
+
+  window.scrollTo(0, 0);
+}
+
 // Utility: Format date
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -355,7 +430,9 @@ async function init() {
 
   // Check if there's a hash in the URL
   const hash = window.location.hash.slice(1);
-  if (hash && posts.find(p => p.slug === hash)) {
+  if (hash === 'about') {
+    renderAbout();
+  } else if (hash && posts.find(p => p.slug === hash)) {
     renderPost(hash);
   } else {
     // Re-render home with loaded posts

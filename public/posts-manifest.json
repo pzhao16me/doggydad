@@ -32,8 +32,18 @@
     },
     {
       "category": "tech-learning",
+      "file": "chrome-devtools-mcp-guide.md",
+      "path": "posts/tech-learning/chrome-devtools-mcp-guide.md"
+    },
+    {
+      "category": "tech-learning",
       "file": "git-workflow.md",
       "path": "posts/tech-learning/git-workflow.md"
+    },
+    {
+      "category": "tech-learning",
+      "file": "strands-agents-sdk-guide.md",
+      "path": "posts/tech-learning/strands-agents-sdk-guide.md"
     },
     {
       "category": "turing-award",
@@ -331,5 +341,5 @@
       "path": "posts/turing-award/alan-turing.md"
     }
   ],
-  "generated": "2025-12-13T12:32:34.431Z"
+  "generated": "2025-12-13T15:19:24.277Z"
 }
