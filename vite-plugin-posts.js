@@ -4,6 +4,23 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+// Helper to copy directory recursively
+function copyDirSync(src, dest) {
+    if (!fs.existsSync(dest)) {
+        fs.mkdirSync(dest, { recursive: true });
+    }
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+    for (const entry of entries) {
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+        if (entry.isDirectory()) {
+            copyDirSync(srcPath, destPath);
+        } else {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    }
+}
+
 export function postsManifestPlugin() {
     return {
         name: 'posts-manifest',
@@ -38,6 +55,17 @@ export function postsManifestPlugin() {
             );
 
             console.log(`📝 Generated manifest with ${manifest.posts.length} posts`);
+        },
+
+        // Copy posts folder to dist after build
+        closeBundle() {
+            const postsDir = path.resolve(__dirname, 'posts');
+            const distPostsDir = path.resolve(__dirname, 'dist', 'posts');
+
+            if (fs.existsSync(postsDir)) {
+                copyDirSync(postsDir, distPostsDir);
+                console.log(`📁 Copied posts folder to dist`);
+            }
         }
     };
 }
