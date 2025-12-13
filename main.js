@@ -346,14 +346,20 @@ window.navigateTo = navigateTo;
 
 // Initialize app
 async function init() {
+  // Show loading state first
+  renderHome();
+  
   await loadPosts();
+  
+  console.log(`🏠 Init complete, ${posts.length} posts loaded`);
 
   // Check if there's a hash in the URL
   const hash = window.location.hash.slice(1);
   if (hash && posts.find(p => p.slug === hash)) {
-    navigateTo('post', hash);
+    renderPost(hash);
   } else {
-    navigateTo('home');
+    // Re-render home with loaded posts
+    renderHome(currentCategory);
   }
 }
 
