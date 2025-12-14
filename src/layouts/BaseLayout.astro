@@ -91,15 +91,6 @@ const publishedTimeISO = formatDateISO(article?.publishedTime);
     </>
   )}
   
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G63268TXPH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G63268TXPH');
-  </script>
-  
   <!-- 10. Structured Data (JSON-LD): 结构化数据，帮助搜索引擎理解内容 -->
   <!-- 可在 Google Rich Results Test 验证: https://search.google.com/test/rich-results -->
   <script type="application/ld+json" set:html={JSON.stringify({
@@ -145,10 +136,12 @@ const publishedTimeISO = formatDateISO(article?.publishedTime);
     })
   })} />
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts - Optimized for LCP -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
   <div id="app">
@@ -194,6 +187,21 @@ const publishedTimeISO = formatDateISO(article?.publishedTime);
       localStorage.setItem('theme', next);
       themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
     });
+    
+    // Google Analytics - Deferred loading for better LCP
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-G63268TXPH';
+      script.async = true;
+      document.head.appendChild(script);
+      
+      script.onload = () => {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G63268TXPH');
+      };
+    }, 3000);
   </script>
   
   <style is:global>
@@ -207,7 +215,7 @@ const publishedTimeISO = formatDateISO(article?.publishedTime);
       --color-text: hsl(220, 20%, 15%);
       --color-text-muted: hsl(220, 10%, 45%);
       --color-border: hsl(220, 15%, 90%);
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif;
       --radius-md: 0.5rem;
       --radius-lg: 0.75rem;
       --radius-xl: 1rem;
