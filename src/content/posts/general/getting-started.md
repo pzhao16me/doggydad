@@ -1,6 +1,6 @@
 ---
 title: 如何向博客添加新文章
-date: 2024-12-11
+date: 2025-12-14
 description: 详细说明如何在这个博客系统中创建和发布新文章的步骤指南。
 tags: [教程, Markdown, 博客]
 ---
@@ -25,7 +25,7 @@ touch posts/my-new-article.md
 ```yaml
 ---
 title: 你的文章标题
-date: 2024-12-11
+date: 2025-12-14
 description: 文章的简短描述，会显示在文章列表中
 tags: [标签1, 标签2, 标签3]
 ---

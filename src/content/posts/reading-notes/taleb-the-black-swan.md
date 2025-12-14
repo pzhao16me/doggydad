@@ -1,6 +1,6 @@
 ---
 title: 《黑天鹅》深度读书笔记
-date: 2024-12-13
+date: 2025-12-14
 category: reading-notes
 author: 纳西姆·尼可拉斯·塔勒布 (Nassim Nicholas Taleb)
 tags: [黑天鹅事件, 极端斯坦, 认识论, 风险管理]

@@ -1,6 +1,6 @@
 ---
 title: Strands Agents SDK 完全指南：构建生产级 AI Agent
-date: 2024-12-13
+date: 2025-12-14
 description: 深入介绍 AWS 开源的 Strands Agents SDK，学习如何用 Python 构建可靠、可扩展的 AI Agent 应用。
 tags: [AI Agent, Python, AWS, LLM, SDK]
 ---
