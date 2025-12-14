@@ -190,6 +190,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"tech-learning/anthropic-mcp-code-execution-analysis.md": {
+	id: "tech-learning/anthropic-mcp-code-execution-analysis.md";
+  slug: "tech-learning/anthropic-mcp-code-execution-analysis";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "tech-learning/chrome-devtools-mcp-guide.md": {
 	id: "tech-learning/chrome-devtools-mcp-guide.md";
   slug: "tech-learning/chrome-devtools-mcp-guide";
