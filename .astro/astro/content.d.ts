@@ -183,6 +183,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"tech-learning/agent-engineering-new-discipline.md": {
+	id: "tech-learning/agent-engineering-new-discipline.md";
+  slug: "tech-learning/agent-engineering-new-discipline";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "tech-learning/chrome-devtools-mcp-guide.md": {
 	id: "tech-learning/chrome-devtools-mcp-guide.md";
   slug: "tech-learning/chrome-devtools-mcp-guide";
