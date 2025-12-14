@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Comments from '../../components/Comments.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -49,6 +50,8 @@ const catInfo = categories[category] || { name: category, color: '#666' };
     <div class="article-content">
       <Content />
     </div>
+    
+    <Comments />
   </article>
 </BaseLayout>
 

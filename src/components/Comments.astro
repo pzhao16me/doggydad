@@ -1,0 +1,84 @@
+---
+// Giscus 评论组件
+---
+
+<div class="comments-section">
+  <h2 class="comments-title">💬 评论</h2>
+  <div id="giscus-container"></div>
+</div>
+
+<script>
+  function loadGiscus() {
+    const container = document.getElementById('giscus-container');
+    if (!container) return;
+    
+    // 清除已有的 giscus
+    container.innerHTML = '';
+    
+    // 获取当前主题
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' 
+      ? 'dark' 
+      : 'light';
+    
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'pzhao16me/doggydad');
+    script.setAttribute('data-repo-id', 'R_kgDOQm9RfQ');
+    script.setAttribute('data-category', 'Q&A');
+    script.setAttribute('data-category-id', 'DIC_kwDOQm9Rfc4Czxu_');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', theme);
+    script.setAttribute('data-lang', 'zh-CN');
+    script.setAttribute('data-loading', 'lazy');
+    script.crossOrigin = 'anonymous';
+    script.async = true;
+    
+    container.appendChild(script);
+  }
+  
+  // 初始加载
+  loadGiscus();
+  
+  // 监听主题切换
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === 'data-theme') {
+        // 主题变化时重新加载 giscus
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (iframe) {
+          const theme = document.documentElement.getAttribute('data-theme') === 'dark' 
+            ? 'dark' 
+            : 'light';
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            'https://giscus.app'
+          );
+        }
+      }
+    });
+  });
+  
+  observer.observe(document.documentElement, { attributes: true });
+</script>
+
+<style>
+  .comments-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-border);
+  }
+  
+  .comments-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+  }
+  
+  #giscus-container {
+    min-height: 200px;
+  }
+</style>
