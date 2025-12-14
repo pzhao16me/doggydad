@@ -119,20 +119,30 @@ const BASE_URL = import.meta.env.BASE_URL;
 
 function navigateTo(view, postSlug = null) {
   currentView = view;
+  const siteUrl = 'https://pzhao16me.github.io/doggydad';
 
   if (view === 'home') {
     window.history.pushState({}, '', BASE_URL);
     renderHome();
-    trackPageView(BASE_URL, 'DoggyDad Blog - 首页');
+    const title = 'DoggyDad Blog - 个人技术博客';
+    const desc = '分享技术见解、编程经验和个人思考的博客';
+    trackPageView(BASE_URL, title);
+    updateMetaTags(title, desc, siteUrl);
   } else if (view === 'about') {
     window.history.pushState({}, '', `${BASE_URL}#about`);
     renderAbout();
-    trackPageView(`${BASE_URL}#about`, 'DoggyDad Blog - 关于');
+    const title = '关于我 - DoggyDad Blog';
+    const desc = '了解 DoggyDad 博客的作者、博客内容和联系方式';
+    trackPageView(`${BASE_URL}#about`, title);
+    updateMetaTags(title, desc, `${siteUrl}/#about`);
   } else if (view === 'post' && postSlug) {
     window.history.pushState({}, '', `${BASE_URL}#${postSlug}`);
     renderPost(postSlug);
     const post = posts.find(p => p.slug === postSlug);
-    trackPageView(`${BASE_URL}#${postSlug}`, post ? post.title : postSlug);
+    const title = post ? `${post.title} - DoggyDad Blog` : postSlug;
+    const desc = post ? post.description : '';
+    trackPageView(`${BASE_URL}#${postSlug}`, title);
+    updateMetaTags(title, desc, `${siteUrl}/#${postSlug}`);
   }
 }
 
@@ -144,6 +154,42 @@ function trackPageView(path, title) {
       page_title: title
     });
   }
+}
+
+// Update page meta tags for SEO
+function updateMetaTags(title, description, url) {
+  // Update title
+  document.title = title;
+  
+  // Update meta description
+  let metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) {
+    metaDesc.setAttribute('content', description);
+  }
+  
+  // Update Open Graph tags
+  let ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.setAttribute('content', title);
+  
+  let ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.setAttribute('content', description);
+  
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) {
+    ogUrl = document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    document.head.appendChild(ogUrl);
+  }
+  ogUrl.setAttribute('content', url);
+  
+  // Update canonical URL
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.setAttribute('rel', 'canonical');
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute('href', url);
 }
 
 window.addEventListener('popstate', () => {
