@@ -27,6 +27,7 @@ const catInfo = categories[category] || { name: category, color: '#666' };
 <BaseLayout 
   title={`${post.data.title} - DoggyDad Blog`}
   description={post.data.description}
+  keywords={post.data.tags}
   article={{ publishedTime: post.data.date, tags: post.data.tags }}
 >
   <article class="article">
