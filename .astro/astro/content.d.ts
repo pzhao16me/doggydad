@@ -211,6 +211,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"tech-learning/zoom-ai-humanitys-last-exam-analysis.md": {
+	id: "tech-learning/zoom-ai-humanitys-last-exam-analysis.md";
+  slug: "tech-learning/zoom-ai-humanitys-last-exam-analysis";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "turing-award/01_1966_Alan_Perlis.md": {
 	id: "turing-award/01_1966_Alan_Perlis.md";
   slug: "turing-award/01_1966_alan_perlis";
