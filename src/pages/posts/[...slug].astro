@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const categories = {
+  'reading-notes': { name: '📚 读书笔记', color: '#e74c3c' },
+  'turing-award': { name: '🏆 图灵奖系列', color: '#f39c12' },
+  'tech-learning': { name: '💻 技术学习', color: '#3498db' },
+  'general': { name: '📝 通用', color: '#9b59b6' }
+};
+
+const category = post.slug.split('/')[0];
+const catInfo = categories[category] || { name: category, color: '#666' };
+---
+
+<BaseLayout 
+  title={`${post.data.title} - DoggyDad Blog`}
+  description={post.data.description}
+  article={{ publishedTime: post.data.date, tags: post.data.tags }}
+>
+  <article class="article">
+    <a href="/doggydad/" class="back-button">← 返回首页</a>
+    
+    <header class="article-header">
+      <div class="article-category" style={`color: ${catInfo.color}`}>
+        {catInfo.name}
+      </div>
+      <h1 class="article-title">{post.data.title}</h1>
+      <div class="post-meta">
+        <span>📅 发布于 {new Date(post.data.date).toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+        {post.data.tags && post.data.tags.length > 0 && (
+          <span>🏷️ {post.data.tags.join(', ')}</span>
+        )}
+      </div>
+    </header>
+    
+    <div class="article-content">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article { max-width: 800px; margin: 0 auto; }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    transition: all 0.15s;
+  }
+  
+  .back-button:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+  
+  .article-header { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 2px solid var(--color-border); }
+  
+  .article-category { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; }
+  
+  .article-title {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+  }
+  
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+  
+  .article-content { font-size: 1.125rem; line-height: 1.8; }
+  .article-content :global(img) { max-width: 100%; border-radius: var(--radius-md); margin: 2rem 0; }
+</style>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="关于我 - DoggyDad Blog" description="了解 DoggyDad 博客的作者、博客内容和联系方式">
+  <article class="article">
+    <a href="/doggydad/" class="back-button">← 返回首页</a>
+    
+    <header class="article-header">
+      <h1 class="article-title">关于我 👋</h1>
+    </header>
+    
+    <div class="article-content">
+      <p>你好！我是 <strong>DoggyDad</strong>，一名热爱技术与思考的软件工程师。</p>
+      
+      <h2>🎯 关于这个博客</h2>
+      <p>这个博客是我记录学习历程、分享技术见解和个人思考的地方。主要内容包括：</p>
+      <ul>
+        <li><strong>🏆 图灵奖系列</strong> - 探索计算机科学先驱们的贡献与思想</li>
+        <li><strong>📚 读书笔记</strong> - 深度阅读笔记，特别关注塔勒布的不确定性系列</li>
+        <li><strong>💻 技术学习</strong> - Git 工作流、开发最佳实践、工具使用技巧</li>
+        <li><strong>📝 通用分享</strong> - 博客教程、个人思考和其他有趣的话题</li>
+      </ul>
+      
+      <h2>💡 我的兴趣</h2>
+      <ul>
+        <li><strong>计算机科学历史</strong> - 相信了解历史能帮助我们更好地理解现在和未来</li>
+        <li><strong>系统思维与风险管理</strong> - 对反脆弱性、黑天鹅事件、概率思维有浓厚兴趣</li>
+        <li><strong>高效工程实践</strong> - 追求用更聪明的方式工作</li>
+        <li><strong>持续学习</strong> - 相信写作是最好的学习方式之一</li>
+      </ul>
+      
+      <h2>🛠️ 技术栈</h2>
+      <p>这个博客使用 <strong>Astro</strong> 构建，部署在 GitHub Pages。</p>
+      
+      <h2>📬 联系我</h2>
+      <ul>
+        <li>💼 <a href="https://linkedin.com/in/peng-zhao-mei" target="_blank">LinkedIn</a></li>
+        <li>𝕏 <a href="https://x.com/Hjfjfjsj" target="_blank">Twitter / X</a></li>
+        <li>🐙 <a href="https://github.com/pzhao16me" target="_blank">GitHub</a></li>
+      </ul>
+      
+      <hr>
+      <p><em>感谢你的访问！希望这里的内容对你有所帮助。</em> ✨</p>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article { max-width: 800px; margin: 0 auto; }
+  
+  .back-button {
+    display: inline-flex;
+    align-items: center;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    transition: all 0.15s;
+  }
+  
+  .back-button:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+  
+  .article-header { margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 2px solid var(--color-border); }
+  
+  .article-title {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .article-content { font-size: 1.125rem; line-height: 1.8; }
+</style>
