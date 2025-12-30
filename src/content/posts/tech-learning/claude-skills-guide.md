@@ -1,6 +1,6 @@
 ---
 title: Claude Skills 深度解析：比 MCP 更强大的 AI 能力扩展方案
-publishDate: 2025-12-30
+date: 2025-12-30
 description: 全面解析 Anthropic 推出的 Claude Skills 功能，了解如何通过技能系统让 Claude 变得更专业、更高效，以及它与 MCP、Subagents 的区别和协同使用方式。
 keywords: [Claude Skills, Anthropic, AI技能系统, Claude Code, MCP对比, AI能力扩展]
 author: DoggyDad

@@ -1,6 +1,6 @@
 ---
 title: Chrome DevTools MCP 完全指南：让 AI 助手控制浏览器调试
-publishDate: 2025-12-14
+date: 2025-12-14
 description: 详细介绍如何使用 Chrome DevTools MCP 服务器，让 AI 助手能够直接与 Chrome 浏览器交互，进行网页调试、性能分析和自动化测试。
 keywords: [Chrome DevTools, MCP服务器, AI调试, 浏览器自动化, Model Context Protocol, Claude DevTools]
 author: DoggyDad

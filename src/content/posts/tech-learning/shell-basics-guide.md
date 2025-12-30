@@ -1,6 +1,6 @@
 ---
 title: Shell 入门完全指南：从零开始掌握命令行
-publishDate: 2025-12-14
+date: 2025-12-14
 description: 面向初学者的 Shell 使用教程，涵盖基础命令、文件操作、管道重定向等核心概念，帮助你快速上手命令行操作。基于 MIT Missing Semester 课程整理。
 keywords: [shell教程, 命令行入门, bash入门, linux命令, 终端使用, shell基础]
 author: DoggyDad
