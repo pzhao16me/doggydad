@@ -1,12 +1,14 @@
 ---
-title: 《随机漫步的傻瓜》深度读书笔记
+title: 《随机漫步的傻瓜》深度解读：塔勒布的随机性哲学与反脆弱思维
 date: 2025-12-14
-category: reading-notes
-author: 纳西姆·尼可拉斯·塔勒布 (Nassim Nicholas Taleb)
+description: 深度剖析塔勒布《Fooled by Randomness》核心理念：幸存者偏差、替代历史、黑天鹅理论。结合LTCM崩溃等经典案例,揭示运气与技能的真相,学习在不确定性中生存的智慧。
+keywords: [随机漫步的傻瓜, 塔勒布, 黑天鹅, 幸存者偏差, 概率论, 投资哲学, 读书笔记, Nassim Taleb]
 tags: [概率论, 认知偏差, 投资哲学, 随机性]
+author: DoggyDad
+category: reading-notes
 ---
 
-# 《随机漫步的傻瓜》深度读书笔记
+# 随机性的智慧：重新理解运气、技能与成功的真相
 
 ## 核心命题
 

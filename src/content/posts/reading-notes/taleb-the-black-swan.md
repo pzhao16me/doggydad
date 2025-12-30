@@ -1,12 +1,14 @@
 ---
-title: 《黑天鹅》深度读书笔记
+title: 《黑天鹅》深度解读：预测失败的世界中如何生存
 date: 2025-12-14
-category: reading-notes
-author: 纳西姆·尼可拉斯·塔勒布 (Nassim Nicholas Taleb)
+description: 深度剖析塔勒布《The Black Swan》核心理念：极端斯坦vs平均斯坦、叙事谬误、未知的未知。结合2008金融危机、COVID-19等案例,学习在不可预测性中管理风险的智慧。
+keywords: [黑天鹅, 塔勒布, The Black Swan, 极端斯坦, 风险管理, 认识论, 杠铃策略, Nassim Taleb]
 tags: [黑天鹅事件, 极端斯坦, 认识论, 风险管理]
+author: DoggyDad
+category: reading-notes
 ---
 
-# 《黑天鹅》深度读书笔记
+# 黑天鹅：重新认识不确定性与极端事件
 
 ## 核心命题
 

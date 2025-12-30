@@ -1,12 +1,14 @@
 ---
-title: 《反脆弱》深度读书笔记
+title: 《反脆弱》深度解读：如何在不确定性中获益的实战指南
 date: 2025-12-14
-category: reading-notes
-author: 纳西姆·尼可拉斯·塔勒布 (Nassim Nicholas Taleb)
+description: 深度剖析塔勒布《Antifragile》核心理念：反脆弱三元组、凸性思维、杠铃策略、选择权思维。结合亚马逊、开源软件等案例,学习如何从波动和压力中变得更强大。
+keywords: [反脆弱, 塔勒布, Antifragile, 杠铃策略, 风险管理, 系统思维, 林迪效应, Nassim Taleb]
 tags: [反脆弱, 系统思维, 风险管理, 进化论]
+author: DoggyDad
+category: reading-notes
 ---
 
-# 《反脆弱》深度读书笔记
+# 反脆弱：从不确定性中获益的生存哲学
 
 ## 核心命题
 

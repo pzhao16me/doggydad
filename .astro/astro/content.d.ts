@@ -204,6 +204,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"tech-learning/claude-skills-guide.md": {
+	id: "tech-learning/claude-skills-guide.md";
+  slug: "tech-learning/claude-skills-guide";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "tech-learning/deepseek-v3-technical-analysis.md": {
 	id: "tech-learning/deepseek-v3-technical-analysis.md";
   slug: "tech-learning/deepseek-v3-technical-analysis";

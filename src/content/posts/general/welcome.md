@@ -34,11 +34,11 @@ tags: [博客, 介绍, 欢迎]
 
 ```javascript
 const techStack = {
-  framework: 'Vite',
-  language: 'JavaScript',
+  framework: 'Astro',
+  language: 'TypeScript',
   styling: 'CSS (with CSS Variables)',
-  markdown: 'marked.js',
-  highlighting: 'highlight.js',
+  markdown: 'Astro Content Collections',
+  highlighting: 'Shiki',
   deployment: 'GitHub Pages',
   dns: 'Cloudflare'
 };
