@@ -1,9 +1,10 @@
 ---
 title: Anthropic MCP 代码执行深度解析：安全沙箱与 AI 编程的未来
-date: 2025-12-14
+publishDate: 2025-12-14
 description: 深入分析 Anthropic 发布的 MCP 代码执行方案，详解安全沙箱架构、Docker 容器化实现、多层防护策略，探讨代码验证、数据分析等实际应用场景，展望 AI 辅助编程的未来发展趋势。
-tags: [MCP, Anthropic, 代码执行, AI安全, Docker, Claude, 沙箱]
 keywords: [MCP代码执行, Anthropic, Claude代码运行, AI沙箱, Docker容器, Model Context Protocol]
+author: DoggyDad
+tags: [MCP, Anthropic, 代码执行, AI安全, Docker, Claude, 沙箱]
 ---
 
 # Anthropic MCP 代码执行深度解析：安全沙箱与 AI 编程的未来

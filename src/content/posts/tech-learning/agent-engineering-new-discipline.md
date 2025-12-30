@@ -1,9 +1,10 @@
 ---
 title: Agent Engineering：AI 智能体工程的新学科解读与实践指南
-date: 2025-12-14
+publishDate: 2025-12-14
 description: 深度解读 LangChain 提出的 Agent Engineering 概念，分析智能体工程为何成为独立学科，涵盖评估体系、可观测性、多智能体架构等核心实践，提供开发者行动指南。
-tags: [AI Agent, LangChain, 智能体工程, LLM, 软件工程, AI开发]
 keywords: [agent engineering, AI智能体, LangChain, 智能体开发, AI工程化, LLM应用]
+author: DoggyDad
+tags: [AI Agent, LangChain, 智能体工程, LLM, 软件工程, AI开发]
 ---
 
 # Agent Engineering：AI 智能体工程的新学科解读与实践指南

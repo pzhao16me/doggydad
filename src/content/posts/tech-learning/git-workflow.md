@@ -1,7 +1,9 @@
 ---
 title: Git 工作流最佳实践
-date: 2025-12-14
+publishDate: 2025-12-14
 description: 学习如何使用 Git 进行高效的版本控制，包括分支策略、提交规范和协作技巧。
+keywords: [Git工作流, 版本控制, Git分支策略, 提交规范, Git最佳实践, 团队协作]
+author: DoggyDad
 tags: [Git, 版本控制, 最佳实践]
 ---
 

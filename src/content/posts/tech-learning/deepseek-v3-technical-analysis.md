@@ -1,9 +1,10 @@
 ---
 title: DeepSeek-V3 深度技术解析：6710亿参数开源模型如何用557万美元挑战GPT-4
-date: 2025-12-14
+publishDate: 2025-12-14
 description: 全面解析 DeepSeek-V3 的核心技术创新，包括 MLA 注意力机制、DeepSeekMoE 架构、FP8 训练、无辅助损失负载均衡等，揭示如何用十分之一成本达到顶级性能。
-tags: [DeepSeek, LLM, MoE, AI训练, 开源模型, 大语言模型]
 keywords: [DeepSeek-V3, 大语言模型, MoE架构, FP8训练, 开源AI, GPT-4替代]
+author: DoggyDad
+tags: [DeepSeek, LLM, MoE, AI训练, 开源模型, 大语言模型]
 ---
 
 # DeepSeek-V3 深度技术解析：开源模型的里程碑

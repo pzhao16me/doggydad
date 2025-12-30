@@ -1,9 +1,10 @@
 ---
 title: Zoom AI 在 Humanity's Last Exam 中的突破：技术分析与行业影响
-date: 2025-12-14
+publishDate: 2025-12-14
 description: 深入分析 Zoom AI 在 Humanity's Last Exam 测试中取得 26.8% 准确率的技术突破，探讨多智能体系统、RAG 技术和企业级 AI 的发展趋势。
-tags: [AI, Zoom, 多智能体系统, RAG, 大语言模型, 企业AI]
 keywords: [Zoom AI, Humanity's Last Exam, 多智能体系统, AI测试, 企业级AI, RAG技术, AI突破]
+author: DoggyDad
+tags: [AI, Zoom, 多智能体系统, RAG, 大语言模型, 企业AI]
 ---
 
 # Zoom AI 在 Humanity's Last Exam 中的突破：技术分析与行业影响
